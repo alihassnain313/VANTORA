@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Testimonials — VANTORA</title>
+
+    <meta name="description" content="See what clients say about working with VANTORA and their digital experiences.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           TESTIMONIAL HERO
+        ========================================= */
+
+        .testimonial-hero {
+            position: relative;
+
+            min-height: 70vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 130px;
+            padding-bottom: 90px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 35%,
+                    rgba(139,92,246,0.12),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 15% 75%,
+                    rgba(34,211,238,0.06),
+                    transparent 28%
+                );
+        }
+
+        .testimonial-hero-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 0.65fr;
+
+            gap: 80px;
+
+            align-items: end;
+        }
+
+        .testimonial-hero h1 {
+            margin-top: 22px;
+
+            max-width: 950px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(48px, 7vw, 92px);
+
+            line-height: 0.97;
+
+            letter-spacing: -0.065em;
+        }
+
+        .testimonial-hero h1 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .testimonial-hero-copy {
+            color: var(--text-soft);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           FEATURED QUOTE
+        ========================================= */
+
+        .featured-testimonial {
+            background: var(--bg-soft);
+        }
+
+        .featured-quote {
+            position: relative;
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            padding: 70px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(139,92,246,0.10),
+                    transparent 30%
+                ),
+                rgba(255,255,255,0.015);
+        }
+
+        .quote-mark {
+            position: absolute;
+
+            top: 35px;
+            left: 45px;
+
+            color: rgba(167,139,250,0.20);
+
+            font-family: Georgia, serif;
+
+            font-size: 100px;
+
+            line-height: 1;
+        }
+
+        .featured-quote blockquote {
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            padding-top: 30px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(25px, 4vw, 43px);
+
+            line-height: 1.25;
+
+            letter-spacing: -0.04em;
+
+            text-align: center;
+
+            color: #e9eaf0;
+        }
+
+        .featured-quote blockquote span {
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .featured-author {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-top: 38px;
+        }
+
+        .author-avatar {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid rgba(167,139,250,0.25);
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(139,92,246,0.20),
+                    rgba(34,211,238,0.08)
+                );
+
+            color: #c4b5fd;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+        .author-info {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4px;
+        }
+
+        .author-info strong {
+            color: #e1e4ea;
+
+            font-size: 11px;
+        }
+
+        .author-info span {
+            color: #707a8d;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================================
+           TESTIMONIAL GRID
+        ========================================= */
+
+        .testimonials-section {
+            background: var(--bg);
+        }
+
+        .testimonials-heading {
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            margin-bottom: 55px;
+        }
+
+        .testimonials-heading h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1.02;
+
+            letter-spacing: -0.05em;
+        }
+
+        .testimonials-heading h2 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .testimonials-heading p {
+            max-width: 380px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .testimonials-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .testimonial-card {
+            position: relative;
+
+            min-height: 340px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.035),
+                    rgba(255,255,255,0.008)
+                );
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                background var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(139,92,246,0.28);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(139,92,246,0.07),
+                    rgba(255,255,255,0.008)
+                );
+        }
+
+        .testimonial-stars {
+            color: #c4b5fd;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+        }
+
+        .testimonial-card blockquote {
+            margin-top: 30px;
+
+            color: #c6ccd7;
+
+            font-size: 13px;
+
+            line-height: 1.85;
+        }
+
+        .testimonial-card blockquote::before {
+            content: "“";
+
+            color: #a78bfa;
+
+            font-family: Georgia, serif;
+
+            font-size: 28px;
+
+            vertical-align: -7px;
+
+            margin-right: 4px;
+        }
+
+        .testimonial-person {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-top: auto;
+
+            padding-top: 30px;
+        }
+
+        .testimonial-avatar {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            color: #9ea8b9;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+        .testimonial-person div {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4px;
+        }
+
+        .testimonial-person strong {
+            color: #e3e6eb;
+
+            font-size: 10px;
+        }
+
+        .testimonial-person span {
+            color: #687286;
+
+            font-size: 8px;
+        }
+
+
+        /* =========================================
+           NUMBERS
+        ========================================= */
+
+        .results-section {
+            background: var(--bg-soft);
+        }
+
+        .results-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-item {
+            padding: 40px 30px;
+
+            border-right: 1px solid var(--border);
+        }
+
+        .result-item:last-child {
+            border-right: 0;
+        }
+
+        .result-number {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(35px, 5vw, 58px);
+
+            line-height: 1;
+
+            letter-spacing: -0.05em;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .result-label {
+            display: block;
+
+            margin-top: 13px;
+
+            color: #70798b;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .testimonial-cta {
+            background: var(--bg);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .testimonial-hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .testimonials-heading {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .result-item:nth-child(2) {
+                border-right: 0;
+            }
+
+            .result-item:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .testimonial-hero {
+                min-height: auto;
+
+                padding-top: 120px;
+
+                padding-bottom: 75px;
+            }
+
+            .testimonial-hero h1 {
+                font-size: 48px;
+            }
+
+            .featured-quote {
+                padding: 45px 25px;
+            }
+
+            .quote-mark {
+                left: 20px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .result-item {
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-logo">
+            V
+        </div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    V
+                </span>
+
+                <span class="logo-text">
+                    VANTORA
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    About
+                </a>
+
+                <a href="services.html" class="nav-link">
+                    Services
+                </a>
+
+                <a href="pricing.html" class="nav-link">
+                    Pricing
+                </a>
+
+                <a href="portfolio.html" class="nav-link">
+                    Portfolio
+                </a>
+
+                <a href="testimonials.html" class="nav-link active">
+                    Testimonials
+                </a>
+
+                <a href="contact.html" class="nav-cta">
+
+                    Let's Talk
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="testimonial-hero">
+
+            <div class="hero-grid"></div>
+
+            <div class="container testimonial-hero-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        CLIENT VOICES
+
+                    </div>
+
+
+                    <h1>
+
+                        Don't take our
+                        <span>word for it.</span>
+
+                    </h1>
+
+                </div>
+
+
+                <div class="testimonial-hero-copy">
+
+                    <p>
+
+                        Great work should speak for itself.
+                        Here's what people say after turning
+                        their ideas into digital experiences
+                        with VANTORA.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FEATURED TESTIMONIAL
+        ====================================== -->
+
+        <section class="featured-testimonial section-padding">
+
+            <div class="container">
+
+                <div class="featured-quote">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+
+                    <blockquote>
+
+                        VANTORA didn't just build us a website.
+                        They gave our brand a completely new
+                        <span>digital presence.</span>
+
+                    </blockquote>
+
+
+                    <div class="featured-author">
+
+                        <div class="author-avatar">
+                            AM
+                        </div>
+
+
+                        <div class="author-info">
+
+                            <strong>
+                                Alex Morgan
+                            </strong>
+
+                            <span>
+                                Founder, Altura Finance
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TESTIMONIAL GRID
+        ====================================== -->
+
+        <section class="testimonials-section section-padding">
+
+            <div class="container">
+
+
+                <div class="testimonials-heading">
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span></span>
+
+                            WHAT CLIENTS SAY
+
+                        </div>
+
+
+                        <h2>
+
+                            Built together.
+                            <span>Remembered longer.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        From strategy to launch, every project
+                        is a collaboration. We care about the
+                        result — and the experience of getting
+                        there.
+
+                    </p>
+
+                </div>
+
+
+                <div class="testimonials-grid">
+
+
+                    <!-- CARD 01 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+
+                        <blockquote>
+
+                            The entire process felt incredibly
+                            intentional. Every detail had a reason,
+                            and the final result looked far beyond
+                            what we imagined.
+
+                        </blockquote>
+
+
+                        <div class="testimonial-person">
+
+                            <div class="testimonial-avatar">
+                                SK
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Sarah Khan
+                                </strong>
+
+                                <span>
+                                    Founder, Kairo Studio
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CARD 02 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+
+                        <blockquote>
+
+                            VANTORA understood our business before
+                            designing anything. That made the
+                            website feel like a real extension of
+                            our company.
+
+                        </blockquote>
+
+
+                        <div class="testimonial-person">
+
+                            <div class="testimonial-avatar">
+                                JR
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    James Reed
+                                </strong>
+
+                                <span>
+                                    Director, Northline
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CARD 03 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+
+                        <blockquote>
+
+                            We needed something premium without
+                            making the experience complicated.
+                            They found that balance perfectly.
+
+                        </blockquote>
+
+
+                        <div class="testimonial-person">
+
+                            <div class="testimonial-avatar">
+                                EM
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Emma Miller
+                                </strong>
+
+                                <span>
+                                    Creative Lead, Solenne
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CARD 04 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+
+                        <blockquote>
+
+                            Communication was clear, design was
+                            sharp and everything felt extremely
+                            professional from beginning to end.
+
+                        </blockquote>
+
+
+                        <div class="testimonial-person">
+
+                            <div class="testimonial-avatar">
+                                DA
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Daniel Ahmed
+                                </strong>
+
+                                <span>
+                                    Founder, Everfield
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CARD 05 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+
+                        <blockquote>
+
+                            Our old website didn't represent us.
+                            The new experience finally feels like
+                            the company we've become.
+
+                        </blockquote>
+
+
+                        <div class="testimonial-person">
+
+                            <div class="testimonial-avatar">
+                                LM
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Liam Morgan
+                                </strong>
+
+                                <span>
+                                    CEO, Monarc Labs
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CARD 06 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+
+                        <blockquote>
+
+                            They took a complicated idea and turned
+                            it into something simple, beautiful and
+                            incredibly easy to understand.
+
+                        </blockquote>
+
+
+                        <div class="testimonial-person">
+
+                            <div class="testimonial-avatar">
+                                NO
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Nora Olsen
+                                </strong>
+
+                                <span>
+                                    Founder, Studio North
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RESULTS
+        ====================================== -->
+
+        <section class="results-section section-padding">
+
+            <div class="container">
+
+
+                <div class="section-label">
+
+                    <span></span>
+
+                    THE NUMBERS
+
+                </div>
+
+
+                <div class="results-grid">
+
+
+                    <div class="result-item">
+
+                        <div class="result-number">
+                            98%
+                        </div>
+
+                        <span class="result-label">
+                            Client Satisfaction
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <div class="result-number">
+                            42+
+                        </div>
+
+                        <span class="result-label">
+                            Projects Delivered
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <div class="result-number">
+                            3.2×
+                        </div>
+
+                        <span class="result-label">
+                            Average Growth
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <div class="result-number">
+                            91%
+                        </div>
+
+                        <span class="result-label">
+                            Repeat Referrals
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CTA
+        ====================================== -->
+
+        <section class="testimonial-cta section-padding">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        YOUR STORY COULD BE NEXT
+
+                    </div>
+
+
+                    <h2>
+
+                        Let's create something
+                        <span>people talk about.</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Have an idea, a business or a brand
+                        ready for its next chapter? Let's talk.
+
+                    </p>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary">
+
+                        Start a Conversation
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            V
+                        </span>
+
+                        <span class="logo-text">
+                            VANTORA
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Digital experiences built for
+                        ambitious brands.
+
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Explore
+                        </h4>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Connect
+                        </h4>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 VANTORA. All rights reserved.
+                </span>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

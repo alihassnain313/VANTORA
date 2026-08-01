@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio — VANTORA</title>
+
+    <meta name="description" content="Explore selected digital projects, websites, brand experiences and creative work by VANTORA.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           PORTFOLIO HERO
+        ========================================= */
+
+        .portfolio-hero {
+            position: relative;
+
+            min-height: 70vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 130px;
+            padding-bottom: 90px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 35%,
+                    rgba(139,92,246,0.12),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 15% 75%,
+                    rgba(34,211,238,0.06),
+                    transparent 28%
+                );
+        }
+
+        .portfolio-hero-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 0.65fr;
+
+            gap: 80px;
+
+            align-items: end;
+        }
+
+        .portfolio-hero h1 {
+            margin-top: 22px;
+
+            max-width: 950px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(48px, 7vw, 92px);
+
+            line-height: 0.97;
+
+            letter-spacing: -0.065em;
+        }
+
+        .portfolio-hero h1 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .portfolio-hero-copy {
+            color: var(--text-soft);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           PORTFOLIO INTRO
+        ========================================= */
+
+        .portfolio-intro {
+            background: var(--bg-soft);
+        }
+
+        .portfolio-intro-grid {
+            display: grid;
+
+            grid-template-columns: 0.65fr 1fr;
+
+            gap: 100px;
+
+            align-items: start;
+        }
+
+        .portfolio-intro h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 60px);
+
+            line-height: 1.05;
+
+            letter-spacing: -0.05em;
+        }
+
+        .portfolio-intro h2 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .portfolio-intro-copy p {
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+        .portfolio-intro-copy p:first-child {
+            color: #e5e7eb;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           FILTERS
+        ========================================= */
+
+        .portfolio-work {
+            background: var(--bg);
+        }
+
+        .portfolio-toolbar {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-bottom: 55px;
+        }
+
+        .portfolio-filters {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .portfolio-filter {
+            padding: 10px 16px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50px;
+
+            background: transparent;
+
+            color: #8e98aa;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            cursor: pointer;
+
+            transition:
+                color var(--transition),
+                border-color var(--transition),
+                background var(--transition);
+        }
+
+        .portfolio-filter:hover,
+        .portfolio-filter.active {
+            border-color:
+                rgba(139,92,246,0.35);
+
+            background:
+                rgba(139,92,246,0.08);
+
+            color: #c4b5fd;
+        }
+
+        .portfolio-count {
+            color: #657083;
+
+            font-size: 10px;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           PROJECT GRID
+        ========================================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .project-card {
+            position: relative;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            background:
+                rgba(255,255,255,0.015);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(139,92,246,0.32);
+        }
+
+        .project-card.hidden {
+            display: none;
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+        }
+
+
+        /* =========================================
+           PROJECT VISUAL
+        ========================================= */
+
+        .project-visual {
+            position: relative;
+
+            height: 390px;
+
+            overflow: hidden;
+
+            background:
+                #101828;
+        }
+
+        .project-card:not(.featured) .project-visual {
+            height: 340px;
+        }
+
+        .project-visual::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(5,8,15,0.72),
+                    transparent 45%
+                );
+
+            pointer-events: none;
+        }
+
+        .project-grid-lines {
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.035) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                50px 50px;
+        }
+
+        .project-glow {
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,0.30),
+                    transparent 68%
+                );
+
+            filter: blur(5px);
+
+            top: -100px;
+            right: -70px;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+        .project-card:hover .project-glow {
+            transform: scale(1.35);
+        }
+
+        .project-window {
+            position: absolute;
+
+            left: 10%;
+            right: 10%;
+
+            top: 13%;
+
+            bottom: -18%;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            border-radius: 18px 18px 0 0;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #172033,
+                    #0b111d
+                );
+
+            box-shadow:
+                0 35px 80px rgba(0,0,0,0.45);
+
+            transform:
+                perspective(1000px)
+                rotateX(3deg);
+
+            transition:
+                transform 0.5s ease;
+        }
+
+        .project-card:hover .project-window {
+            transform:
+                perspective(1000px)
+                rotateX(0deg)
+                translateY(-8px);
+        }
+
+        .window-top {
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            padding: 0 14px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+
+            background:
+                rgba(255,255,255,0.025);
+        }
+
+        .window-dot {
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.18);
+        }
+
+        .window-content {
+            padding: 35px;
+        }
+
+        .mock-label {
+            width: 80px;
+            height: 7px;
+
+            border-radius: 10px;
+
+            background:
+                rgba(167,139,250,0.65);
+        }
+
+        .mock-heading {
+            width: 65%;
+
+            height: 38px;
+
+            margin-top: 25px;
+
+            border-radius: 8px;
+
+            background:
+                rgba(255,255,255,0.82);
+        }
+
+        .mock-heading.small {
+            width: 45%;
+
+            height: 25px;
+
+            margin-top: 8px;
+
+            background:
+                rgba(255,255,255,0.16);
+        }
+
+        .mock-lines {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+            margin-top: 28px;
+        }
+
+        .mock-lines span {
+            width: 75%;
+            height: 5px;
+
+            border-radius: 10px;
+
+            background:
+                rgba(255,255,255,0.10);
+        }
+
+        .mock-lines span:nth-child(2) {
+            width: 62%;
+        }
+
+        .mock-lines span:nth-child(3) {
+            width: 48%;
+        }
+
+        .mock-cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .mock-card {
+            height: 75px;
+
+            border:
+                1px solid rgba(255,255,255,0.07);
+
+            border-radius: 10px;
+
+            background:
+                rgba(255,255,255,0.035);
+        }
+
+
+        /* =========================================
+           DIFFERENT PROJECT THEMES
+        ========================================= */
+
+        .project-visual.theme-cyan {
+            background:
+                radial-gradient(
+                    circle at 70% 30%,
+                    rgba(34,211,238,0.15),
+                    transparent 30%
+                ),
+                #0d1722;
+        }
+
+        .project-visual.theme-pink {
+            background:
+                radial-gradient(
+                    circle at 70% 30%,
+                    rgba(236,72,153,0.13),
+                    transparent 30%
+                ),
+                #18101b;
+        }
+
+        .project-visual.theme-gold {
+            background:
+                radial-gradient(
+                    circle at 70% 30%,
+                    rgba(245,158,11,0.13),
+                    transparent 30%
+                ),
+                #19150d;
+        }
+
+        .project-visual.theme-green {
+            background:
+                radial-gradient(
+                    circle at 70% 30%,
+                    rgba(34,197,94,0.12),
+                    transparent 30%
+                ),
+                #0d1712;
+        }
+
+        .theme-cyan .mock-label {
+            background: rgba(103,232,249,0.70);
+        }
+
+        .theme-pink .mock-label {
+            background: rgba(244,114,182,0.70);
+        }
+
+        .theme-gold .mock-label {
+            background: rgba(251,191,36,0.75);
+        }
+
+        .theme-green .mock-label {
+            background: rgba(74,222,128,0.70);
+        }
+
+
+        /* =========================================
+           PROJECT INFORMATION
+        ========================================= */
+
+        .project-info {
+            display: flex;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding: 25px 28px 28px;
+        }
+
+        .project-category {
+            color: #717b8e;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+        }
+
+        .project-info h3 {
+            margin-top: 8px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 22px;
+
+            letter-spacing: -0.025em;
+        }
+
+        .project-info p {
+            max-width: 500px;
+
+            margin-top: 8px;
+
+            color: var(--text-muted);
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+        .project-arrow {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            color: #b8c0ce;
+
+            transition:
+                transform var(--transition),
+                background var(--transition),
+                border-color var(--transition);
+        }
+
+        .project-card:hover .project-arrow {
+            transform: rotate(45deg);
+
+            border-color:
+                rgba(139,92,246,0.35);
+
+            background:
+                rgba(139,92,246,0.08);
+
+            color: #c4b5fd;
+        }
+
+
+        /* =========================================
+           PROJECT STATS
+        ========================================= */
+
+        .project-stats {
+            display: flex;
+
+            gap: 25px;
+
+            margin-top: 17px;
+        }
+
+        .project-stat {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4px;
+        }
+
+        .project-stat strong {
+            color: #d8dce5;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 13px;
+        }
+
+        .project-stat span {
+            color: #687286;
+
+            font-size: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+        }
+
+
+        /* =========================================
+           WORK CTA
+        ========================================= */
+
+        .portfolio-cta {
+            margin-top: 18px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .portfolio-hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .portfolio-intro-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: auto;
+            }
+
+            .project-visual,
+            .project-card:not(.featured) .project-visual {
+                height: 350px;
+            }
+
+            .portfolio-toolbar {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .portfolio-hero {
+                min-height: auto;
+
+                padding-top: 120px;
+
+                padding-bottom: 75px;
+            }
+
+            .portfolio-hero h1 {
+                font-size: 48px;
+            }
+
+            .project-visual,
+            .project-card:not(.featured) .project-visual {
+                height: 290px;
+            }
+
+            .project-window {
+                left: 6%;
+                right: 6%;
+
+                top: 12%;
+            }
+
+            .window-content {
+                padding: 22px;
+            }
+
+            .mock-heading {
+                height: 28px;
+            }
+
+            .mock-cards {
+                gap: 6px;
+            }
+
+            .mock-card {
+                height: 50px;
+            }
+
+            .project-info {
+                padding: 22px;
+            }
+
+            .project-info h3 {
+                font-size: 19px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-logo">V</div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    V
+                </span>
+
+                <span class="logo-text">
+                    VANTORA
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    About
+                </a>
+
+                <a href="services.html" class="nav-link">
+                    Services
+                </a>
+
+                <a href="pricing.html" class="nav-link">
+                    Pricing
+                </a>
+
+                <a href="portfolio.html" class="nav-link active">
+                    Portfolio
+                </a>
+
+                <a href="contact.html" class="nav-cta">
+
+                    Let's Talk
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="portfolio-hero">
+
+            <div class="hero-grid"></div>
+
+            <div class="container portfolio-hero-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        SELECTED WORK
+
+                    </div>
+
+
+                    <h1>
+
+                        Ideas made
+                        <span>visible.</span>
+
+                    </h1>
+
+                </div>
+
+
+                <div class="portfolio-hero-copy">
+
+                    <p>
+
+                        A selection of digital experiences
+                        designed and developed with clarity,
+                        intention and attention to detail.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INTRO
+        ====================================== -->
+
+        <section class="portfolio-intro section-padding">
+
+            <div class="container portfolio-intro-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        OUR WORK
+
+                    </div>
+
+
+                    <h2>
+
+                        Design that
+                        <span>does something.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="portfolio-intro-copy">
+
+                    <p>
+
+                        Every project starts with a purpose —
+                        not just a visual style.
+
+                    </p>
+
+
+                    <p>
+
+                        We create websites and digital systems
+                        that make brands easier to understand,
+                        easier to trust and easier to remember.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             WORK
+        ====================================== -->
+
+        <section class="portfolio-work section-padding">
+
+            <div class="container">
+
+
+                <div class="portfolio-toolbar">
+
+                    <div class="portfolio-filters">
+
+                        <button
+                            class="portfolio-filter active"
+                            data-filter="all"
+                            type="button">
+
+                            All Work
+
+                        </button>
+
+                        <button
+                            class="portfolio-filter"
+                            data-filter="web"
+                            type="button">
+
+                            Web Design
+
+                        </button>
+
+                        <button
+                            class="portfolio-filter"
+                            data-filter="brand"
+                            type="button">
+
+                            Branding
+
+                        </button>
+
+                        <button
+                            class="portfolio-filter"
+                            data-filter="strategy"
+                            type="button">
+
+                            Strategy
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="portfolio-count">
+
+                        06 SELECTED PROJECTS
+
+                    </div>
+
+                </div>
+
+
+                <div class="projects-grid" id="projectsGrid">
+
+
+                    <!-- =================================
+                         PROJECT 01
+                    ================================== -->
+
+                    <article
+                        class="project-card featured"
+                        data-category="web">
+
+                        <div class="project-visual">
+
+                            <div class="project-grid-lines"></div>
+
+                            <div class="project-glow"></div>
+
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+
+                                </div>
+
+
+                                <div class="window-content">
+
+                                    <div class="mock-label"></div>
+
+                                    <div class="mock-heading"></div>
+
+                                    <div class="mock-heading small"></div>
+
+
+                                    <div class="mock-lines">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <div class="mock-cards">
+
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <div class="project-category">
+                                    Web Design / Development
+                                </div>
+
+
+                                <h3>
+                                    Altura Finance
+                                </h3>
+
+
+                                <p>
+
+                                    A premium financial platform
+                                    designed around trust,
+                                    simplicity and conversion.
+
+                                </p>
+
+
+                                <div class="project-stats">
+
+                                    <div class="project-stat">
+
+                                        <strong>
+                                            +48%
+                                        </strong>
+
+                                        <span>
+                                            Engagement
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="project-stat">
+
+                                        <strong>
+                                            2.4×
+                                        </strong>
+
+                                        <span>
+                                            Conversion
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PROJECT 02
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="brand">
+
+                        <div class="project-visual theme-cyan">
+
+                            <div class="project-grid-lines"></div>
+
+                            <div class="project-glow"></div>
+
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+
+                                </div>
+
+
+                                <div class="window-content">
+
+                                    <div class="mock-label"></div>
+
+                                    <div class="mock-heading"></div>
+
+                                    <div class="mock-heading small"></div>
+
+
+                                    <div class="mock-lines">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <div class="mock-cards">
+
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <div class="project-category">
+                                    Brand Identity
+                                </div>
+
+
+                                <h3>
+                                    Kairo Studio
+                                </h3>
+
+
+                                <p>
+
+                                    A refined identity system for
+                                    a modern creative studio.
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PROJECT 03
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="web">
+
+                        <div class="project-visual theme-pink">
+
+                            <div class="project-grid-lines"></div>
+
+                            <div class="project-glow"></div>
+
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+
+                                </div>
+
+
+                                <div class="window-content">
+
+                                    <div class="mock-label"></div>
+
+                                    <div class="mock-heading"></div>
+
+                                    <div class="mock-heading small"></div>
+
+
+                                    <div class="mock-lines">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <div class="mock-cards">
+
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <div class="project-category">
+                                    E-Commerce
+                                </div>
+
+
+                                <h3>
+                                    Solenne
+                                </h3>
+
+
+                                <p>
+
+                                    A fashion commerce experience
+                                    built around editorial storytelling.
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PROJECT 04
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="strategy">
+
+                        <div class="project-visual theme-gold">
+
+                            <div class="project-grid-lines"></div>
+
+                            <div class="project-glow"></div>
+
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+
+                                </div>
+
+
+                                <div class="window-content">
+
+                                    <div class="mock-label"></div>
+
+                                    <div class="mock-heading"></div>
+
+                                    <div class="mock-heading small"></div>
+
+
+                                    <div class="mock-lines">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <div class="mock-cards">
+
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <div class="project-category">
+                                    Digital Strategy
+                                </div>
+
+
+                                <h3>
+                                    Northline
+                                </h3>
+
+
+                                <p>
+
+                                    A digital positioning system
+                                    created to clarify a growing brand.
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PROJECT 05
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="web">
+
+                        <div class="project-visual theme-green">
+
+                            <div class="project-grid-lines"></div>
+
+                            <div class="project-glow"></div>
+
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+
+                                </div>
+
+
+                                <div class="window-content">
+
+                                    <div class="mock-label"></div>
+
+                                    <div class="mock-heading"></div>
+
+                                    <div class="mock-heading small"></div>
+
+
+                                    <div class="mock-lines">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <div class="mock-cards">
+
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <div class="project-category">
+                                    Web Experience
+                                </div>
+
+
+                                <h3>
+                                    Everfield
+                                </h3>
+
+
+                                <p>
+
+                                    A clean digital platform built
+                                    for a sustainability-focused company.
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PROJECT 06
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="brand">
+
+                        <div class="project-visual">
+
+                            <div class="project-grid-lines"></div>
+
+                            <div class="project-glow"></div>
+
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+                                    <span class="window-dot"></span>
+
+                                </div>
+
+
+                                <div class="window-content">
+
+                                    <div class="mock-label"></div>
+
+                                    <div class="mock-heading"></div>
+
+                                    <div class="mock-heading small"></div>
+
+
+                                    <div class="mock-lines">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <div class="mock-cards">
+
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <div class="project-category">
+                                    Brand & Digital
+                                </div>
+
+
+                                <h3>
+                                    Monarc Labs
+                                </h3>
+
+
+                                <p>
+
+                                    A technology brand transformed
+                                    into a confident digital identity.
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- =================================
+                     CTA
+                ================================== -->
+
+                <div class="portfolio-cta">
+
+                    <div class="cta-box">
+
+                        <div class="section-label">
+
+                            <span></span>
+
+                            YOUR PROJECT NEXT?
+
+                        </div>
+
+
+                        <h2>
+
+                            Let's make something
+                            <span>worth seeing.</span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Have a project in mind?
+                            Let's turn the idea into a digital
+                            experience people remember.
+
+                        </p>
+
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-primary">
+
+                            Start a Conversation
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            V
+                        </span>
+
+                        <span class="logo-text">
+                            VANTORA
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Digital experiences built for
+                        ambitious brands.
+
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Explore
+                        </h4>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Connect
+                        </h4>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 VANTORA. All rights reserved.
+                </span>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- =========================================
+         PORTFOLIO FILTER JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const filters =
+                document.querySelectorAll(".portfolio-filter");
+
+            const projects =
+                document.querySelectorAll(".project-card");
+
+
+            filters.forEach(filter => {
+
+                filter.addEventListener("click", () => {
+
+                    const selected =
+                        filter.getAttribute("data-filter");
+
+
+                    filters.forEach(button => {
+
+                        button.classList.remove("active");
+
+                    });
+
+
+                    filter.classList.add("active");
+
+
+                    projects.forEach(project => {
+
+                        const category =
+                            project.getAttribute("data-category");
+
+
+                        if (
+                            selected === "all" ||
+                            category === selected
+                        ) {
+
+                            project.classList.remove("hidden");
+
+                        } else {
+
+                            project.classList.add("hidden");
+
+                        }
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

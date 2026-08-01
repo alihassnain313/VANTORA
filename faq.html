@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAQ — VANTORA</title>
+
+    <meta name="description" content="Frequently asked questions about VANTORA's web design, development, process, pricing and support.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           FAQ HERO
+        ========================================= */
+
+        .faq-hero {
+            position: relative;
+
+            min-height: 68vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 130px;
+            padding-bottom: 90px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 35%,
+                    rgba(139,92,246,0.12),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 15% 75%,
+                    rgba(34,211,238,0.06),
+                    transparent 28%
+                );
+        }
+
+        .faq-hero-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 0.65fr;
+
+            gap: 80px;
+
+            align-items: end;
+        }
+
+        .faq-hero h1 {
+            margin-top: 22px;
+
+            max-width: 950px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(48px, 7vw, 92px);
+
+            line-height: 0.97;
+
+            letter-spacing: -0.065em;
+        }
+
+        .faq-hero h1 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .faq-hero-copy {
+            color: var(--text-soft);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           FAQ INTRO
+        ========================================= */
+
+        .faq-intro {
+            background: var(--bg-soft);
+        }
+
+        .faq-intro-grid {
+            display: grid;
+
+            grid-template-columns: 0.65fr 1fr;
+
+            gap: 100px;
+
+            align-items: start;
+        }
+
+        .faq-intro h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 60px);
+
+            line-height: 1.05;
+
+            letter-spacing: -0.05em;
+        }
+
+        .faq-intro h2 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .faq-intro-copy p {
+            max-width: 650px;
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+        .faq-intro-copy p:first-child {
+            color: #e5e7eb;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           FAQ MAIN
+        ========================================= */
+
+        .faq-main {
+            background: var(--bg);
+        }
+
+        .faq-main-grid {
+            display: grid;
+
+            grid-template-columns: 0.65fr 1fr;
+
+            gap: 90px;
+
+            align-items: start;
+        }
+
+        .faq-side {
+            position: sticky;
+
+            top: 120px;
+        }
+
+        .faq-side h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(36px, 4vw, 55px);
+
+            line-height: 1.04;
+
+            letter-spacing: -0.05em;
+        }
+
+        .faq-side h2 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .faq-side p {
+            max-width: 400px;
+
+            margin-top: 22px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .faq-contact-card {
+            margin-top: 35px;
+
+            padding: 22px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,0.018);
+        }
+
+        .faq-contact-card span {
+            display: block;
+
+            color: #70798b;
+
+            font-size: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+        }
+
+        .faq-contact-card strong {
+            display: block;
+
+            margin-top: 8px;
+
+            color: #dce0e7;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 14px;
+        }
+
+        .faq-contact-card a {
+            display: inline-flex;
+
+            margin-top: 15px;
+
+            color: #a78bfa;
+
+            font-size: 10px;
+        }
+
+
+        /* =========================================
+           FAQ GROUPS
+        ========================================= */
+
+        .faq-groups {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 55px;
+        }
+
+        .faq-group-title {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            color: #818a9b;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+        }
+
+        .faq-group-title::before {
+            content: "";
+
+            width: 22px;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    transparent
+                );
+        }
+
+        .faq-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            padding: 25px 0;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #e2e5eb;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .faq-question-text {
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+        }
+
+        .faq-number {
+            color: #596274;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 0.08em;
+        }
+
+        .faq-icon {
+            width: 30px;
+            height: 30px;
+
+            display: grid;
+
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            color: #9f8de0;
+
+            font-size: 16px;
+
+            line-height: 1;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .faq-answer {
+            display: grid;
+
+            grid-template-rows: 0fr;
+
+            transition:
+                grid-template-rows 0.35s ease;
+        }
+
+        .faq-answer-inner {
+            overflow: hidden;
+
+            max-width: 700px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+        .faq-item.open .faq-answer {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-item.open .faq-answer-inner {
+            padding:
+                0 45px 25px 38px;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+
+            border-color:
+                rgba(139,92,246,0.35);
+
+            background:
+                rgba(139,92,246,0.08);
+        }
+
+
+        /* =========================================
+           STILL HAVE QUESTIONS
+        ========================================= */
+
+        .faq-bottom {
+            background: var(--bg-soft);
+        }
+
+        .faq-bottom-box {
+            display: grid;
+
+            grid-template-columns: 1fr auto;
+
+            align-items: center;
+
+            gap: 50px;
+
+            padding: 55px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(139,92,246,0.10),
+                    transparent 32%
+                ),
+                rgba(255,255,255,0.015);
+        }
+
+        .faq-bottom-box h2 {
+            margin-top: 18px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(34px, 4vw, 52px);
+
+            line-height: 1.05;
+
+            letter-spacing: -0.05em;
+        }
+
+        .faq-bottom-box h2 span {
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .faq-bottom-box p {
+            max-width: 650px;
+
+            margin-top: 18px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .faq-hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .faq-intro-grid,
+            .faq-main-grid {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .faq-side {
+                position: static;
+            }
+
+            .faq-bottom-box {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .faq-hero {
+                min-height: auto;
+
+                padding-top: 120px;
+
+                padding-bottom: 75px;
+            }
+
+            .faq-hero h1 {
+                font-size: 48px;
+            }
+
+            .faq-question {
+                padding: 20px 0;
+
+                font-size: 12px;
+            }
+
+            .faq-question-text {
+                gap: 10px;
+            }
+
+            .faq-number {
+                display: none;
+            }
+
+            .faq-item.open .faq-answer-inner {
+                padding:
+                    0 42px 22px 0;
+            }
+
+            .faq-bottom-box {
+                padding: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-logo">
+            V
+        </div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    V
+                </span>
+
+                <span class="logo-text">
+                    VANTORA
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    About
+                </a>
+
+                <a href="services.html" class="nav-link">
+                    Services
+                </a>
+
+                <a href="pricing.html" class="nav-link">
+                    Pricing
+                </a>
+
+                <a href="portfolio.html" class="nav-link">
+                    Portfolio
+                </a>
+
+                <a href="testimonials.html" class="nav-link">
+                    Testimonials
+                </a>
+
+                <a href="faq.html" class="nav-link active">
+                    FAQ
+                </a>
+
+                <a href="contact.html" class="nav-cta">
+
+                    Let's Talk
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="faq-hero">
+
+            <div class="hero-grid"></div>
+
+            <div class="container faq-hero-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        FREQUENTLY ASKED
+
+                    </div>
+
+
+                    <h1>
+
+                        Questions?
+                        <span>We've got answers.</span>
+
+                    </h1>
+
+                </div>
+
+
+                <div class="faq-hero-copy">
+
+                    <p>
+
+                        Everything you need to know about our
+                        process, websites, pricing, timelines and
+                        what happens after launch.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INTRO
+        ====================================== -->
+
+        <section class="faq-intro section-padding">
+
+            <div class="container faq-intro-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        GOOD TO KNOW
+
+                    </div>
+
+
+                    <h2>
+
+                        No confusing
+                        <span>fine print.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-intro-copy">
+
+                    <p>
+
+                        We believe good communication starts
+                        before the project does.
+
+                    </p>
+
+
+                    <p>
+
+                        So we've answered the questions we hear
+                        most often. If something isn't here, you
+                        can always reach out directly and we'll
+                        help you figure it out.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FAQ MAIN
+        ====================================== -->
+
+        <section class="faq-main section-padding">
+
+            <div class="container faq-main-grid">
+
+
+                <!-- SIDE -->
+
+                <aside class="faq-side">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        HELP CENTER
+
+                    </div>
+
+
+                    <h2>
+
+                        Everything,
+                        <span>explained.</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Browse the categories to find exactly
+                        what you're looking for.
+
+                    </p>
+
+
+                    <div class="faq-contact-card">
+
+                        <span>
+                            Still unsure?
+                        </span>
+
+                        <strong>
+                            Let's talk about your project.
+                        </strong>
+
+                        <a href="contact.html">
+                            Contact VANTORA ↗
+                        </a>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- QUESTIONS -->
+
+                <div class="faq-groups">
+
+
+                    <!-- =================================
+                         GENERAL
+                    ================================== -->
+
+                    <div class="faq-group">
+
+                        <div class="faq-group-title">
+                            General
+                        </div>
+
+
+                        <div class="faq-list">
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            01
+                                        </span>
+
+                                        <span>
+                                            What does VANTORA do?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        VANTORA creates modern
+                                        digital experiences for
+                                        businesses, brands and
+                                        individuals. Our work
+                                        includes website design,
+                                        development, branding and
+                                        digital strategy.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            02
+                                        </span>
+
+                                        <span>
+                                            Do you work with small businesses?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Absolutely. We work with
+                                        businesses at different
+                                        stages, from early ideas and
+                                        small companies to established
+                                        brands looking for a stronger
+                                        digital presence.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            03
+                                        </span>
+
+                                        <span>
+                                            Can you work with an existing brand?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Yes. We can build around
+                                        your existing logo, colors,
+                                        typography and brand system,
+                                        or help improve the visual
+                                        direction when needed.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         PROCESS
+                    ================================== -->
+
+                    <div class="faq-group">
+
+                        <div class="faq-group-title">
+                            Process
+                        </div>
+
+
+                        <div class="faq-list">
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            04
+                                        </span>
+
+                                        <span>
+                                            What happens after I contact you?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        We'll first understand your
+                                        goals, audience, project
+                                        requirements and timeline.
+                                        From there, we'll recommend
+                                        the most suitable direction
+                                        and next steps.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            05
+                                        </span>
+
+                                        <span>
+                                            How involved will I be?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Your input matters throughout
+                                        the project. We'll keep
+                                        communication clear and make
+                                        sure major design and content
+                                        decisions align with your
+                                        goals.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            06
+                                        </span>
+
+                                        <span>
+                                            Can I request changes?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Yes. Projects include a
+                                        review process where we
+                                        collect feedback and refine
+                                        the work toward the agreed
+                                        direction.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         DEVELOPMENT
+                    ================================== -->
+
+                    <div class="faq-group">
+
+                        <div class="faq-group-title">
+                            Development
+                        </div>
+
+
+                        <div class="faq-list">
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            07
+                                        </span>
+
+                                        <span>
+                                            Will my website work on mobile?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Yes. Responsive behavior is
+                                        considered throughout the
+                                        design and development so
+                                        the experience works across
+                                        phones, tablets and desktop
+                                        screens.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            08
+                                        </span>
+
+                                        <span>
+                                            Can you add animations and interactions?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Yes. We can add subtle
+                                        transitions, scroll effects,
+                                        hover interactions, menus,
+                                        accordions and other
+                                        JavaScript-powered features
+                                        where they improve the
+                                        experience.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            09
+                                        </span>
+
+                                        <span>
+                                            Can you update the website later?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Yes. New pages, sections,
+                                        features, content and design
+                                        improvements can be added as
+                                        your business grows.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         PRICING
+                    ================================== -->
+
+                    <div class="faq-group">
+
+                        <div class="faq-group-title">
+                            Pricing & Timeline
+                        </div>
+
+
+                        <div class="faq-list">
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            10
+                                        </span>
+
+                                        <span>
+                                            How much does a website cost?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Pricing depends on the
+                                        project's pages, features,
+                                        design requirements and
+                                        complexity. You can view our
+                                        starting packages on the
+                                        Pricing page.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            11
+                                        </span>
+
+                                        <span>
+                                            How long does a project take?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Timeline depends on the
+                                        project's size and complexity.
+                                        Once we understand the scope,
+                                        we'll be able to give you a
+                                        more realistic timeframe.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq-item">
+
+                                <button
+                                    class="faq-question"
+                                    type="button">
+
+                                    <div class="faq-question-text">
+
+                                        <span class="faq-number">
+                                            12
+                                        </span>
+
+                                        <span>
+                                            Can I get a custom quote?
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="faq-icon">
+                                        +
+                                    </span>
+
+                                </button>
+
+
+                                <div class="faq-answer">
+
+                                    <div class="faq-answer-inner">
+
+                                        Of course. If your project
+                                        doesn't fit one of our
+                                        packages, contact us with
+                                        your requirements and we'll
+                                        create a custom scope.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BOTTOM CTA
+        ====================================== -->
+
+        <section class="faq-bottom section-padding">
+
+            <div class="container">
+
+                <div class="faq-bottom-box">
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span></span>
+
+                            STILL HAVE A QUESTION?
+
+                        </div>
+
+
+                        <h2>
+
+                            Let's talk about
+                            <span>your project.</span>
+
+                        </h2>
+
+
+                        <p>
+
+                            If you couldn't find the answer you're
+                            looking for, send us a message. We'll
+                            be happy to help.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary">
+
+                        Contact VANTORA
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            V
+                        </span>
+
+                        <span class="logo-text">
+                            VANTORA
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Digital experiences built for
+                        ambitious brands.
+
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Explore
+                        </h4>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Connect
+                        </h4>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 VANTORA. All rights reserved.
+                </span>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- =========================================
+         FAQ JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const faqItems =
+                document.querySelectorAll(".faq-item");
+
+
+            faqItems.forEach(item => {
+
+                const question =
+                    item.querySelector(".faq-question");
+
+
+                question.addEventListener("click", () => {
+
+                    const isOpen =
+                        item.classList.contains("open");
+
+
+                    faqItems.forEach(otherItem => {
+
+                        otherItem.classList.remove("open");
+
+                    });
+
+
+                    if (!isOpen) {
+
+                        item.classList.add("open");
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

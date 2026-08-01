@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About VANTORA — Digital Excellence</title>
+
+    <meta name="description" content="Discover VANTORA, our story, values, approach and the people behind our digital work.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           ABOUT PAGE
+        ========================================= */
+
+        .about-hero {
+            position: relative;
+            min-height: 72vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 130px;
+            padding-bottom: 90px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 75% 35%,
+                    rgba(139,92,246,0.10),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 20% 70%,
+                    rgba(34,211,238,0.06),
+                    transparent 28%
+                );
+        }
+
+        .about-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.7fr;
+            gap: 80px;
+
+            align-items: end;
+        }
+
+        .about-hero h1 {
+            margin-top: 22px;
+
+            max-width: 850px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: 0.98;
+
+            letter-spacing: -0.06em;
+        }
+
+        .about-hero h1 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .about-hero-copy {
+            color: var(--text-soft);
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .about-scroll {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-top: 35px;
+
+            color: var(--text-muted);
+
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .about-scroll span {
+            width: 35px;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--accent),
+                    var(--accent-2)
+                );
+        }
+
+
+        /* =========================================
+           STORY
+        ========================================= */
+
+        .story-section {
+            background: var(--bg-soft);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            gap: 100px;
+
+            align-items: start;
+        }
+
+        .story-title h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -0.045em;
+        }
+
+        .story-title h2 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .story-content p {
+            margin-bottom: 22px;
+
+            color: var(--text-soft);
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .story-content p:first-child {
+            color: #e5e7eb;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           VALUES
+        ========================================= */
+
+        .values-section {
+            background: var(--bg);
+        }
+
+        .values-heading {
+            max-width: 700px;
+        }
+
+        .values-heading h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -0.045em;
+        }
+
+        .values-heading h2 span {
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+
+            margin-top: 55px;
+        }
+
+        .value-card {
+            min-height: 300px;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.045),
+                    rgba(255,255,255,0.012)
+                );
+
+            transition:
+                transform var(--transition),
+                border var(--transition),
+                background var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(139,92,246,0.30);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(139,92,246,0.08),
+                    rgba(255,255,255,0.015)
+                );
+        }
+
+        .value-number {
+            color: #626b7d;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+
+            display: grid;
+            place-items: center;
+
+            margin-top: 55px;
+
+            border: 1px solid var(--border);
+            border-radius: 14px;
+
+            background: rgba(255,255,255,0.035);
+
+            color: #c4b5fd;
+
+            font-size: 20px;
+        }
+
+        .value-card h3 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 21px;
+        }
+
+        .value-card p {
+            margin-top: 9px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           PROCESS
+        ========================================= */
+
+        .process-section {
+            background: var(--bg-soft);
+        }
+
+        .process-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            gap: 40px;
+        }
+
+        .process-header h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -0.045em;
+        }
+
+        .process-header h2 span {
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .process-header p {
+            max-width: 360px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .process-list {
+            margin-top: 60px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .process-item {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            gap: 30px;
+
+            align-items: center;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            transition:
+                padding var(--transition),
+                background var(--transition);
+        }
+
+        .process-item:hover {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            background: rgba(255,255,255,0.015);
+        }
+
+        .process-number {
+            color: #697287;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .process-item h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 22px;
+        }
+
+        .process-item p {
+            color: var(--text-muted);
+
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           ABOUT CTA
+        ========================================= */
+
+        .about-cta {
+            padding-top: 110px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .about-hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .values-grid .value-card:last-child {
+                grid-column: span 2;
+            }
+
+            .process-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .process-item {
+                grid-template-columns: 70px 1fr;
+            }
+
+            .process-item p {
+                grid-column: 2;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .about-hero {
+                min-height: auto;
+
+                padding-top: 120px;
+                padding-bottom: 80px;
+            }
+
+            .about-hero h1 {
+                font-size: 48px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid .value-card:last-child {
+                grid-column: auto;
+            }
+
+            .value-card {
+                min-height: 280px;
+            }
+
+            .process-item {
+                grid-template-columns: 50px 1fr;
+
+                gap: 15px;
+            }
+
+            .process-item p {
+                grid-column: 2;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-logo">V</div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">V</span>
+
+                <span class="logo-text">
+                    VANTORA
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="about.html" class="nav-link active">
+                    About
+                </a>
+
+                <a href="services.html" class="nav-link">
+                    Services
+                </a>
+
+                <a href="pricing.html" class="nav-link">
+                    Pricing
+                </a>
+
+                <a href="portfolio.html" class="nav-link">
+                    Portfolio
+                </a>
+
+                <a href="contact.html" class="nav-cta">
+                    Let's Talk
+                    <span>↗</span>
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         ABOUT HERO
+    ========================================== -->
+
+    <main>
+
+        <section class="about-hero">
+
+            <div class="hero-grid"></div>
+
+            <div class="container about-hero-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        ABOUT VANTORA
+
+                    </div>
+
+
+                    <h1>
+
+                        We don't just
+                        <span>build websites.</span>
+
+                    </h1>
+
+                </div>
+
+
+                <div class="about-hero-copy">
+
+                    <p>
+
+                        We build digital experiences that give
+                        ambitious businesses the confidence to
+                        move forward.
+
+                    </p>
+
+
+                    <div class="about-scroll">
+
+                        <span></span>
+
+                        Our story
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             STORY
+        ====================================== -->
+
+        <section class="story-section section-padding">
+
+            <div class="container story-grid">
+
+                <div class="story-title">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        OUR STORY
+
+                    </div>
+
+
+                    <h2>
+
+                        From an idea
+                        <span>to an impact.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="story-content">
+
+                    <p>
+
+                        VANTORA exists for businesses that refuse
+                        to settle for ordinary digital experiences.
+
+                    </p>
+
+
+                    <p>
+
+                        We believe a website should be more than
+                        a collection of pages. It should communicate
+                        your value, build trust and make people
+                        want to take the next step.
+
+                    </p>
+
+
+                    <p>
+
+                        That's why we bring strategy, design,
+                        development and creative thinking together
+                        under one roof.
+
+                    </p>
+
+
+                    <p>
+
+                        Every project begins with understanding.
+                        Every design has a purpose. Every line of
+                        code exists to create a better experience.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             VALUES
+        ====================================== -->
+
+        <section class="values-section section-padding">
+
+            <div class="container">
+
+                <div class="values-heading">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        WHAT DRIVES US
+
+                    </div>
+
+
+                    <h2>
+
+                        Principles behind
+                        <span>our work.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="values-grid">
+
+
+                    <article class="value-card">
+
+                        <div class="value-number">
+                            01
+                        </div>
+
+
+                        <div class="value-icon">
+                            ◇
+                        </div>
+
+
+                        <h3>
+                            Purpose
+                        </h3>
+
+
+                        <p>
+
+                            Every visual, interaction and
+                            decision should have a reason
+                            behind it.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <div class="value-number">
+                            02
+                        </div>
+
+
+                        <div class="value-icon">
+                            ✦
+                        </div>
+
+
+                        <h3>
+                            Creativity
+                        </h3>
+
+
+                        <p>
+
+                            We look beyond templates to create
+                            experiences that feel distinctive,
+                            relevant and memorable.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <div class="value-number">
+                            03
+                        </div>
+
+
+                        <div class="value-icon">
+                            ↗
+                        </div>
+
+
+                        <h3>
+                            Results
+                        </h3>
+
+
+                        <p>
+
+                            Great design means little without
+                            performance. We create experiences
+                            designed to move businesses forward.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROCESS
+        ====================================== -->
+
+        <section class="process-section section-padding">
+
+            <div class="container">
+
+                <div class="process-header">
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span></span>
+
+                            OUR APPROACH
+
+                        </div>
+
+
+                        <h2>
+
+                            Simple process.
+                            <span>Serious results.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        A focused process keeps every project
+                        clear, intentional and moving forward.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-list">
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+
+                        <h3>
+                            Discover
+                        </h3>
+
+
+                        <p>
+
+                            We understand your business,
+                            audience, goals and challenges
+                            before creating anything.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+
+                        <h3>
+                            Strategize
+                        </h3>
+
+
+                        <p>
+
+                            We turn insights into a clear
+                            digital direction designed around
+                            your objectives.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+
+                        <h3>
+                            Create
+                        </h3>
+
+
+                        <p>
+
+                            Strategy becomes a polished
+                            interface, strong visual identity
+                            and functional experience.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            04
+                        </div>
+
+
+                        <h3>
+                            Launch
+                        </h3>
+
+
+                        <p>
+
+                            We refine, test and prepare the
+                            final experience so it is ready
+                            to perform in the real world.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CTA
+        ====================================== -->
+
+        <section class="cta-section section-padding about-cta">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        LET'S WORK TOGETHER
+
+                    </div>
+
+
+                    <h2>
+
+                        Ready to make your
+                        <span>next move?</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Tell us where you want to go.
+                        We'll help you build the digital
+                        experience to get there.
+
+                    </p>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary">
+
+                        Start a Conversation
+
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            V
+                        </span>
+
+                        <span class="logo-text">
+                            VANTORA
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Digital experiences built for
+                        ambitious brands.
+
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Explore
+                        </h4>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Connect
+                        </h4>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 VANTORA. All rights reserved.
+                </span>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

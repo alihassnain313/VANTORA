@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services — VANTORA</title>
+
+    <meta name="description" content="VANTORA digital services including web design, development, branding, UI/UX and digital strategy.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           SERVICES HERO
+        ========================================= */
+
+        .services-hero {
+            position: relative;
+            min-height: 75vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 130px;
+            padding-bottom: 90px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 35%,
+                    rgba(139,92,246,0.12),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 15% 70%,
+                    rgba(34,211,238,0.06),
+                    transparent 28%
+                );
+        }
+
+        .services-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.65fr;
+            gap: 80px;
+
+            align-items: end;
+        }
+
+        .services-hero h1 {
+            margin-top: 22px;
+
+            max-width: 900px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(48px, 7vw, 92px);
+            line-height: 0.97;
+
+            letter-spacing: -0.065em;
+        }
+
+        .services-hero h1 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .services-hero-copy {
+            color: var(--text-soft);
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           SERVICE INTRO
+        ========================================= */
+
+        .services-intro {
+            background: var(--bg-soft);
+        }
+
+        .services-intro-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            gap: 100px;
+
+            align-items: start;
+        }
+
+        .services-intro h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -0.05em;
+        }
+
+        .services-intro h2 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .services-intro-content p {
+            margin-bottom: 22px;
+
+            color: var(--text-soft);
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .services-intro-content p:first-child {
+            color: #e5e7eb;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           SERVICES GRID
+        ========================================= */
+
+        .services-section {
+            background: var(--bg);
+        }
+
+        .services-heading {
+            max-width: 760px;
+        }
+
+        .services-heading h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -0.05em;
+        }
+
+        .services-heading h2 span {
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+
+            margin-top: 60px;
+        }
+
+        .service-box {
+            position: relative;
+
+            min-height: 390px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            padding: 35px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.045),
+                    rgba(255,255,255,0.012)
+                );
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                background var(--transition);
+        }
+
+        .service-box::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            top: -90px;
+            right: -90px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,0.18),
+                    transparent 70%
+                );
+
+            transition: transform 0.5s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(139,92,246,0.35);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(139,92,246,0.08),
+                    rgba(255,255,255,0.015)
+                );
+        }
+
+        .service-box:hover::before {
+            transform: scale(1.6);
+        }
+
+        .service-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-number {
+            color: #667085;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid var(--border);
+            border-radius: 16px;
+
+            background: rgba(255,255,255,0.035);
+
+            color: #c4b5fd;
+
+            font-size: 22px;
+        }
+
+        .service-box-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-box h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 27px;
+
+            letter-spacing: -0.025em;
+        }
+
+        .service-box p {
+            max-width: 500px;
+
+            margin-top: 12px;
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+            line-height: 1.85;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+        }
+
+        .service-tags span {
+            padding: 7px 11px;
+
+            border: 1px solid var(--border);
+            border-radius: 50px;
+
+            color: #8f98a9;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+
+        /* =========================================
+           FEATURED SERVICE
+        ========================================= */
+
+        .featured-service {
+            grid-column: span 2;
+
+            min-height: 300px;
+
+            display: grid;
+            grid-template-columns: 1fr 0.65fr;
+
+            gap: 60px;
+
+            align-items: end;
+        }
+
+        .featured-service h3 {
+            font-size: clamp(30px, 4vw, 48px);
+        }
+
+        .featured-service p {
+            max-width: 650px;
+        }
+
+        .featured-side {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .featured-badge {
+            width: 160px;
+            height: 160px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid rgba(139,92,246,0.25);
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,0.10),
+                    transparent 65%
+                );
+
+            color: #c4b5fd;
+
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+
+            text-align: center;
+        }
+
+
+        /* =========================================
+           PROCESS STRIP
+        ========================================= */
+
+        .service-process {
+            background: var(--bg-soft);
+        }
+
+        .service-process-heading {
+            text-align: center;
+        }
+
+        .service-process-heading h2 {
+            margin-top: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -0.05em;
+        }
+
+        .service-process-heading h2 span {
+            background:
+                linear-gradient(
+                    100deg,
+                    #a78bfa,
+                    #67e8f9
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .process-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+
+            margin-top: 60px;
+
+            border: 1px solid var(--border);
+        }
+
+        .process-card {
+            min-height: 230px;
+
+            padding: 28px;
+
+            background: rgba(255,255,255,0.012);
+
+            border-right: 1px solid var(--border);
+        }
+
+        .process-card:last-child {
+            border-right: 0;
+        }
+
+        .process-card-number {
+            color: #737d90;
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .process-card h3 {
+            margin-top: 55px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 19px;
+        }
+
+        .process-card p {
+            margin-top: 10px;
+
+            color: var(--text-muted);
+
+            font-size: 11px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .services-cta {
+            padding-top: 110px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .services-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .services-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-service {
+                grid-column: auto;
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .featured-side {
+                justify-content: flex-start;
+            }
+
+            .process-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-card:nth-child(2) {
+                border-right: 0;
+            }
+
+            .process-card:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .services-hero {
+                min-height: auto;
+
+                padding-top: 120px;
+                padding-bottom: 80px;
+            }
+
+            .services-hero h1 {
+                font-size: 48px;
+            }
+
+            .service-box {
+                min-height: 350px;
+
+                padding: 27px;
+            }
+
+            .featured-service {
+                min-height: 400px;
+            }
+
+            .process-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .process-card {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .process-card:last-child {
+                border-bottom: 0;
+            }
+
+            .process-card:nth-child(2) {
+                border-bottom: 1px solid var(--border);
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-logo">V</div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">V</span>
+
+                <span class="logo-text">
+                    VANTORA
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    About
+                </a>
+
+                <a href="services.html" class="nav-link active">
+                    Services
+                </a>
+
+                <a href="pricing.html" class="nav-link">
+                    Pricing
+                </a>
+
+                <a href="portfolio.html" class="nav-link">
+                    Portfolio
+                </a>
+
+                <a href="contact.html" class="nav-cta">
+                    Let's Talk
+                    <span>↗</span>
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="services-hero">
+
+            <div class="hero-grid"></div>
+
+            <div class="container services-hero-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        WHAT WE DO
+
+                    </div>
+
+
+                    <h1>
+
+                        Digital work
+                        <span>with direction.</span>
+
+                    </h1>
+
+                </div>
+
+
+                <div class="services-hero-copy">
+
+                    <p>
+
+                        We combine strategy, design and
+                        technology to create digital experiences
+                        that are clear, memorable and built
+                        to perform.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INTRO
+        ====================================== -->
+
+        <section class="services-intro section-padding">
+
+            <div class="container services-intro-grid">
+
+                <div>
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        OUR EXPERTISE
+
+                    </div>
+
+
+                    <h2>
+
+                        Everything your
+                        <span>brand needs.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="services-intro-content">
+
+                    <p>
+
+                        One team. One clear direction.
+                        A digital presence designed around
+                        your goals.
+
+                    </p>
+
+
+                    <p>
+
+                        From the first wireframe to the final
+                        interaction, we focus on creating
+                        experiences that look exceptional and
+                        work beautifully.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SERVICES
+        ====================================== -->
+
+        <section class="services-section section-padding">
+
+            <div class="container">
+
+                <div class="services-heading">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        SERVICES
+
+                    </div>
+
+
+                    <h2>
+
+                        Built around your
+                        <span>next opportunity.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                01
+                            </div>
+
+                            <div class="service-icon">
+                                ◇
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-box-content">
+
+                            <h3>
+                                Web Design
+                            </h3>
+
+
+                            <p>
+
+                                High-end interfaces designed
+                                to communicate your brand,
+                                build trust and guide visitors
+                                toward action.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>
+                                    UI Design
+                                </span>
+
+                                <span>
+                                    UX Strategy
+                                </span>
+
+                                <span>
+                                    Responsive
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                02
+                            </div>
+
+                            <div class="service-icon">
+                                &lt;/&gt;
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-box-content">
+
+                            <h3>
+                                Web Development
+                            </h3>
+
+
+                            <p>
+
+                                Fast, responsive and scalable
+                                websites built with clean
+                                code and modern web standards.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                03
+                            </div>
+
+                            <div class="service-icon">
+                                ✦
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-box-content">
+
+                            <h3>
+                                Brand Identity
+                            </h3>
+
+
+                            <p>
+
+                                Distinctive visual systems that
+                                give your business a recognizable
+                                presence across every touchpoint.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>
+                                    Identity
+                                </span>
+
+                                <span>
+                                    Visuals
+                                </span>
+
+                                <span>
+                                    Guidelines
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 04 -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                04
+                            </div>
+
+                            <div class="service-icon">
+                                ↗
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-box-content">
+
+                            <h3>
+                                Digital Strategy
+                            </h3>
+
+
+                            <p>
+
+                                Clear digital direction based on
+                                your audience, positioning,
+                                business goals and opportunities.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>
+                                    Research
+                                </span>
+
+                                <span>
+                                    Planning
+                                </span>
+
+                                <span>
+                                    Growth
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FEATURED SERVICE -->
+
+                    <article class="service-box featured-service">
+
+                        <div class="service-box-content">
+
+                            <div class="service-number">
+                                05 — FULL EXPERIENCE
+                            </div>
+
+
+                            <h3>
+                                Complete Digital Experience
+                            </h3>
+
+
+                            <p>
+
+                                Need everything together?
+                                We can bring strategy, branding,
+                                design and development into one
+                                cohesive digital experience built
+                                specifically around your business.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>
+                                    Strategy
+                                </span>
+
+                                <span>
+                                    Design
+                                </span>
+
+                                <span>
+                                    Development
+                                </span>
+
+                                <span>
+                                    Launch
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="featured-side">
+
+                            <div class="featured-badge">
+
+                                ONE
+                                <br>
+                                COMPLETE
+                                <br>
+                                SYSTEM
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROCESS
+        ====================================== -->
+
+        <section class="service-process section-padding">
+
+            <div class="container">
+
+                <div class="service-process-heading">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        HOW IT WORKS
+
+                    </div>
+
+
+                    <h2>
+
+                        From first idea
+                        <span>to final launch.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="process-cards">
+
+
+                    <div class="process-card">
+
+                        <div class="process-card-number">
+                            01
+                        </div>
+
+
+                        <h3>
+                            Discover
+                        </h3>
+
+
+                        <p>
+
+                            We learn about your business,
+                            audience and goals.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-card-number">
+                            02
+                        </div>
+
+
+                        <h3>
+                            Design
+                        </h3>
+
+
+                        <p>
+
+                            We turn strategy into a clear
+                            and memorable visual experience.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-card-number">
+                            03
+                        </div>
+
+
+                        <h3>
+                            Build
+                        </h3>
+
+
+                        <p>
+
+                            We develop the experience with
+                            performance and usability in mind.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-card-number">
+                            04
+                        </div>
+
+
+                        <h3>
+                            Launch
+                        </h3>
+
+
+                        <p>
+
+                            We test, refine and prepare
+                            everything for launch.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CTA
+        ====================================== -->
+
+        <section class="cta-section section-padding services-cta">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        START A PROJECT
+
+                    </div>
+
+
+                    <h2>
+
+                        Have an idea?
+                        <span>Let's build it.</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Tell us what you're working on and
+                        let's create something worth remembering.
+
+                    </p>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary">
+
+                        Start a Conversation
+
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            V
+                        </span>
+
+                        <span class="logo-text">
+                            VANTORA
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Digital experiences built for
+                        ambitious brands.
+
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Explore
+                        </h4>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Connect
+                        </h4>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 VANTORA. All rights reserved.
+                </span>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
