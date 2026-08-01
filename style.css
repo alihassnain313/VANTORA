@@ -504,9 +504,9 @@ img {
 .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
 
-    padding: 9px 14px;
+    padding: 8px 13px;
 
     border: 1px solid var(--border);
     border-radius: 999px;
@@ -516,14 +516,11 @@ img {
     color: var(--text-soft);
 
     font-size: 12px;
-    line-height: 1.5;
 
     backdrop-filter: blur(10px);
 }
 
 .status-dot {
-    flex: 0 0 7px;
-
     width: 7px;
     height: 7px;
 
@@ -550,12 +547,12 @@ img {
 }
 
 .hero h1 {
-    margin-top: 30px;
+    margin-top: 28px;
 
     font-family: "Manrope", sans-serif;
 
     font-size: clamp(48px, 6vw, 82px);
-    line-height: 1.02;
+    line-height: 0.99;
 
     letter-spacing: -0.055em;
 
@@ -580,20 +577,20 @@ img {
 .hero-description {
     max-width: 590px;
 
-    margin-top: 30px;
+    margin-top: 28px;
 
     color: var(--text-soft);
 
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 13px;
 
-    margin-top: 36px;
+    margin-top: 34px;
 }
 
 .btn {
@@ -669,14 +666,13 @@ img {
 .hero-trust {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 13px;
 
-    margin-top: 44px;
+    margin-top: 42px;
 }
 
 .trust-avatars {
     display: flex;
-    flex: 0 0 auto;
 }
 
 .avatar {
@@ -716,16 +712,14 @@ img {
 .hero-trust strong {
     font-size: 11px;
     font-weight: 600;
-    line-height: 1.5;
 }
 
 .hero-trust span {
-    margin-top: 4px;
+    margin-top: 3px;
 
     color: var(--text-muted);
 
     font-size: 10px;
-    line-height: 1.5;
 }
 
 
@@ -815,14 +809,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    gap: 15px;
 }
 
 .mini-brand {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
 
     color: #dbe1ed;
 
@@ -838,8 +830,6 @@ img {
     display: grid;
     place-items: center;
 
-    flex: 0 0 25px;
-
     border-radius: 8px;
 
     background:
@@ -854,7 +844,7 @@ img {
 
 .card-dots {
     display: flex;
-    gap: 5px;
+    gap: 4px;
 }
 
 .card-dots i {
@@ -867,28 +857,23 @@ img {
 }
 
 .chart-area {
-    margin-top: 42px;
+    margin-top: 40px;
 }
 
 .chart-label {
     display: flex;
     align-items: end;
     justify-content: space-between;
-
-    gap: 20px;
 }
 
 .chart-label span {
     color: var(--text-muted);
     font-size: 11px;
-    line-height: 1.5;
 }
 
 .chart-label strong {
     font-family: "Manrope", sans-serif;
     font-size: 25px;
-    line-height: 1.2;
-    white-space: nowrap;
 }
 
 .chart {
@@ -896,7 +881,7 @@ img {
 
     height: 150px;
 
-    margin-top: 16px;
+    margin-top: 15px;
 
     border-bottom: 1px solid var(--border);
 
@@ -1001,27 +986,26 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    margin-top: 24px;
+    margin-top: 22px;
 
-    padding-top: 20px;
+    padding-top: 19px;
 
     border-top: 1px solid var(--border);
 }
 
 .card-stats div {
-    min-width: 0;
-    padding: 0 12px;
+    padding-right: 10px;
 
     border-right: 1px solid var(--border);
 }
 
-.card-stats div:first-child {
-    padding-left: 0;
-}
-
 .card-stats div:last-child {
     border-right: none;
-    padding-right: 0;
+    padding-left: 10px;
+}
+
+.card-stats div:nth-child(2) {
+    padding-left: 10px;
 }
 
 .card-stats span,
@@ -1032,14 +1016,11 @@ img {
 .card-stats span {
     color: var(--text-muted);
     font-size: 9px;
-    line-height: 1.5;
 }
 
 .card-stats strong {
-    margin-top: 5px;
+    margin-top: 4px;
     font-size: 14px;
-    line-height: 1.4;
-    white-space: nowrap;
 }
 
 
@@ -1053,9 +1034,9 @@ img {
 
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 11px;
 
-    padding: 13px 16px;
+    padding: 12px 15px;
 
     border: 1px solid rgba(255,255,255,0.11);
     border-radius: 14px;
@@ -1112,8 +1093,6 @@ img {
     display: grid;
     place-items: center;
 
-    flex: 0 0 34px;
-
     border-radius: 10px;
 
     background:
@@ -1130,14 +1109,11 @@ img {
 .floating-card span {
     color: var(--text-muted);
     font-size: 8px;
-    line-height: 1.5;
 }
 
 .floating-card strong {
-    margin-top: 4px;
+    margin-top: 3px;
     font-size: 11px;
-    line-height: 1.5;
-    white-space: nowrap;
 }
 
 .progress-circle {
@@ -1146,8 +1122,6 @@ img {
 
     display: grid;
     place-items: center;
-
-    flex: 0 0 38px;
 
     border-radius: 50%;
 
@@ -1198,8 +1172,6 @@ img {
     width: 34px;
     height: 1px;
 
-    flex: 0 0 34px;
-
     background: linear-gradient(
         90deg,
         var(--accent),
@@ -1243,7 +1215,6 @@ img {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.22em;
-    white-space: nowrap;
 }
 
 .marquee-track b {
@@ -1277,14 +1248,11 @@ img {
     font-weight: 700;
 
     letter-spacing: 0.16em;
-    line-height: 1.5;
 }
 
 .section-label span {
     width: 22px;
     height: 1px;
-
-    flex: 0 0 22px;
 
     background:
         linear-gradient(
@@ -1313,7 +1281,7 @@ img {
     grid-template-columns: 1fr 0.65fr;
     gap: 100px;
 
-    margin-top: 38px;
+    margin-top: 35px;
 
     align-items: end;
 }
@@ -1323,7 +1291,7 @@ img {
     font-family: "Manrope", sans-serif;
 
     font-size: clamp(38px, 5vw, 65px);
-    line-height: 1.08;
+    line-height: 1.05;
 
     letter-spacing: -0.045em;
 }
@@ -1331,9 +1299,7 @@ img {
 .intro-grid h2 span,
 .section-heading h2 span,
 .cta-box h2 span {
-    display: block;
-
-    margin-top: 4px;
+display: inline;
 
     background:
         linear-gradient(
@@ -1348,11 +1314,15 @@ img {
     color: transparent;
 }
 
+.intro-text {
+    padding-bottom: 2px;
+}
+
 .intro-text p {
     color: var(--text-soft);
 
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 1.85;
 }
 
 .text-link,
@@ -1361,7 +1331,7 @@ img {
     align-items: center;
     gap: 9px;
 
-    margin-top: 28px;
+    margin-top: 26px;
 
     color: white;
 
@@ -1398,7 +1368,7 @@ img {
 }
 
 .section-heading h2 {
-    margin-top: 21px;
+    margin-top: 20px;
 }
 
 .outline-link {
@@ -1441,6 +1411,9 @@ img {
     padding: 30px;
 
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
@@ -1513,7 +1486,6 @@ img {
 
     font-size: 11px;
     font-weight: 700;
-    line-height: 1.5;
 }
 
 .service-icon {
@@ -1523,7 +1495,7 @@ img {
     display: grid;
     place-items: center;
 
-    margin-top: 70px;
+    margin-top: 62px;
 
     border: 1px solid var(--border);
     border-radius: 15px;
@@ -1546,39 +1518,43 @@ img {
 }
 
 .service-card h3 {
-    margin-top: 23px;
+    margin-top: 20px;
 
     font-family: "Manrope", sans-serif;
 
     font-size: 23px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .service-card p {
     max-width: 310px;
 
-    margin-top: 11px;
+    margin-top: 10px;
 
     color: var(--text-muted);
 
     font-size: 12px;
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 .service-card a {
-    position: absolute;
+    position: relative;
 
-    left: 30px;
-    bottom: 28px;
+    margin-top: auto;
+    padding-top: 25px;
 
     display: inline-flex;
     align-items: center;
     gap: 7px;
 
+    width: fit-content;
+
     color: var(--text-soft);
 
     font-size: 11px;
     font-weight: 700;
+
+    z-index: 2;
 }
 
 .service-card a span {
@@ -1624,7 +1600,6 @@ img {
     font-family: "Manrope", sans-serif;
 
     font-size: clamp(35px, 4vw, 50px);
-    line-height: 1.1;
 
     letter-spacing: -0.04em;
 
@@ -1652,12 +1627,11 @@ img {
 .stat-item span {
     display: block;
 
-    margin-top: 9px;
+    margin-top: 7px;
 
     color: var(--text-muted);
 
     font-size: 10px;
-    line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -1741,18 +1715,14 @@ img {
 
     max-width: 800px;
 
-    margin: 24px auto 0;
+    margin: 22px auto 0;
 
     font-family: "Manrope", sans-serif;
 
     font-size: clamp(38px, 5vw, 65px);
-    line-height: 1.08;
+    line-height: 1.05;
 
     letter-spacing: -0.045em;
-}
-
-.cta-box h2 span {
-    margin-top: 5px;
 }
 
 .cta-box p {
@@ -1761,12 +1731,12 @@ img {
 
     max-width: 560px;
 
-    margin: 24px auto 32px;
+    margin: 22px auto 30px;
 
     color: var(--text-soft);
 
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 .cta-box .btn {
@@ -1796,12 +1766,12 @@ img {
 .footer-brand p {
     max-width: 300px;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
     color: var(--text-muted);
 
     font-size: 12px;
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 .footer-links {
@@ -1811,12 +1781,11 @@ img {
 }
 
 .footer-links h4 {
-    margin-bottom: 19px;
+    margin-bottom: 18px;
 
     color: white;
 
     font-size: 11px;
-    line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -1826,12 +1795,11 @@ img {
 
     width: fit-content;
 
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 
     color: var(--text-muted);
 
     font-size: 11px;
-    line-height: 1.6;
 
     transition: color var(--transition);
 }
@@ -1853,7 +1821,6 @@ img {
     color: #555d6e;
 
     font-size: 9px;
-    line-height: 1.6;
 }
 
 .footer-bottom div {
@@ -2028,19 +1995,13 @@ img {
         padding-bottom: 70px;
     }
 
-    .hero-badge {
-        max-width: 100%;
-        line-height: 1.6;
-    }
-
     .hero h1 {
         font-size: clamp(42px, 13vw, 62px);
-        line-height: 1.03;
     }
 
     .hero-description {
         font-size: 14px;
-        line-height: 1.85;
+        line-height: 1.8;
     }
 
     .hero-buttons {
@@ -2052,7 +2013,7 @@ img {
     }
 
     .hero-trust {
-        margin-top: 32px;
+        margin-top: 30px;
     }
 
     .hero-visual {
@@ -2067,19 +2028,6 @@ img {
         padding: 19px;
 
         transform: none;
-    }
-
-    .card-stats {
-        gap: 0;
-    }
-
-    .card-stats div {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    .card-stats strong {
-        font-size: 13px;
     }
 
     .orbit-one {
@@ -2110,7 +2058,6 @@ img {
     .section-heading h2,
     .cta-box h2 {
         font-size: 39px;
-        line-height: 1.08;
     }
 
     .section-heading {
@@ -2128,6 +2075,19 @@ img {
 
     .service-card {
         min-height: 350px;
+        padding: 28px;
+    }
+
+    .service-icon {
+        margin-top: 52px;
+    }
+
+    .service-card h3 {
+        margin-top: 18px;
+    }
+
+    .service-card a {
+        padding-top: 22px;
     }
 
     .stats-grid {
@@ -2156,10 +2116,6 @@ img {
 
     .cta-box {
         padding: 65px 22px;
-    }
-
-    .cta-box p {
-        line-height: 1.85;
     }
 
     .footer-links {
@@ -2191,7 +2147,6 @@ img {
 
     .hero-badge {
         font-size: 9px;
-        padding: 8px 11px;
     }
 
     .hero-visual {
@@ -2224,17 +2179,26 @@ img {
 
     .service-card {
         min-height: 330px;
+        padding: 25px;
+    }
+
+    .service-icon {
+        margin-top: 45px;
+    }
+
+    .service-card h3 {
+        margin-top: 17px;
+    }
+
+    .service-card p {
+        margin-top: 9px;
+    }
+
+    .service-card a {
+        padding-top: 20px;
     }
 
     .cta-box h2 {
         font-size: 35px;
-    }
-
-    .card-stats span {
-        font-size: 8px;
-    }
-
-    .card-stats strong {
-        font-size: 12px;
     }
 }
