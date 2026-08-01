@@ -1,61 +1,200 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VANTORA — Digital Excellence</title>
-    <meta name="description" content="VANTORA creates premium digital experiences, modern websites and powerful digital solutions.">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="VANTORA creates premium websites, digital experiences and modern digital solutions for ambitious brands."
+    >
+
+    <meta
+        name="theme-color"
+        content="#070b14"
+    >
+
+    <title>VANTORA — Digital Experiences That Matter</title>
+
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         MAIN STYLESHEET
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          PAGE LOADER
     ========================== -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-logo">V</div>
+
+    <div
+        class="page-loader"
+        id="pageLoader"
+        aria-hidden="true"
+    >
+
+        <div class="loader-logo">
+            V
+        </div>
+
         <div class="loader-line"></div>
+
     </div>
 
 
     <!-- =========================
          HEADER
     ========================== -->
-    <header class="header" id="header">
+
+    <header
+        class="header"
+        id="header"
+    >
 
         <div class="container nav-container">
 
-            <a href="index.html" class="logo">
-                <span class="logo-mark">V</span>
-                <span class="logo-text">VANTORA</span>
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="VANTORA Home"
+            >
+
+                <span class="logo-mark">
+                    V
+                </span>
+
+                <span class="logo-text">
+                    VANTORA
+                </span>
+
             </a>
 
-            <nav class="nav-menu" id="navMenu">
 
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <!-- NAVIGATION -->
 
-                <a href="contact.html" class="nav-cta">
+            <nav
+                class="nav-menu"
+                id="navMenu"
+                aria-label="Main navigation"
+            >
+
+                <a
+                    href="index.html"
+                    class="nav-link active"
+                    aria-current="page"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="about.html"
+                    class="nav-link"
+                >
+                    About
+                </a>
+
+                <a
+                    href="services.html"
+                    class="nav-link"
+                >
+                    Services
+                </a>
+
+                <a
+                    href="pricing.html"
+                    class="nav-link"
+                >
+                    Pricing
+                </a>
+
+                <a
+                    href="portfolio.html"
+                    class="nav-link"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    href="testimonials.html"
+                    class="nav-link"
+                >
+                    Testimonials
+                </a>
+
+                <a
+                    href="faq.html"
+                    class="nav-link"
+                >
+                    FAQ
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="nav-cta"
+                >
+
                     Let's Talk
-                    <span>↗</span>
+
+                    <span aria-hidden="true">
+                        ↗
+                    </span>
+
                 </a>
 
             </nav>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+            >
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
         </div>
@@ -64,63 +203,152 @@
 
 
     <!-- =========================
-         HERO SECTION
+         MAIN CONTENT
     ========================== -->
+
     <main>
+
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
 
         <section class="hero">
 
-            <div class="hero-glow glow-one"></div>
-            <div class="hero-glow glow-two"></div>
+            <div
+                class="hero-glow glow-one"
+                aria-hidden="true"
+            ></div>
 
-            <div class="hero-grid"></div>
+            <div
+                class="hero-glow glow-two"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="hero-grid"
+                aria-hidden="true"
+            ></div>
+
 
             <div class="container hero-container">
 
+
+                <!-- HERO CONTENT -->
+
                 <div class="hero-content">
 
+
+                    <!-- BADGE -->
+
                     <div class="hero-badge">
-                        <span class="status-dot"></span>
-                        Digital experiences that move businesses forward
+
+                        <span
+                            class="status-dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Digital experiences built to move brands forward
+
                     </div>
 
+
+                    <!-- HEADING -->
+
                     <h1>
+
                         We build
-                        <span class="gradient-text">digital</span>
+
+                        <span class="gradient-text">
+                            digital
+                        </span>
+
                         experiences that matter.
+
                     </h1>
 
+
+                    <!-- DESCRIPTION -->
+
                     <p class="hero-description">
-                        VANTORA helps ambitious brands turn ideas into
-                        high-performance digital experiences designed to
-                        attract, engage and grow.
+
+                        VANTORA creates modern websites,
+                        memorable brand experiences and
+                        high-performance digital solutions
+                        designed to help ambitious businesses
+                        stand out and grow.
+
                     </p>
+
+
+                    <!-- BUTTONS -->
 
                     <div class="hero-buttons">
 
-                        <a href="services.html" class="btn btn-primary">
+                        <a
+                            href="services.html"
+                            class="btn btn-primary"
+                        >
+
                             Explore Services
-                            <span>↗</span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+
                         </a>
 
-                        <a href="portfolio.html" class="btn btn-secondary">
+
+                        <a
+                            href="portfolio.html"
+                            class="btn btn-secondary"
+                        >
+
                             View Our Work
+
                         </a>
 
                     </div>
 
+
+                    <!-- TRUST -->
+
                     <div class="hero-trust">
 
-                        <div class="trust-avatars">
-                            <div class="avatar">A</div>
-                            <div class="avatar">M</div>
-                            <div class="avatar">S</div>
-                            <div class="avatar">+</div>
+                        <div
+                            class="trust-avatars"
+                            aria-hidden="true"
+                        >
+
+                            <div class="avatar">
+                                V
+                            </div>
+
+                            <div class="avatar">
+                                A
+                            </div>
+
+                            <div class="avatar">
+                                M
+                            </div>
+
+                            <div class="avatar">
+                                +
+                            </div>
+
                         </div>
 
+
                         <div>
-                            <strong>Trusted by growing brands</strong>
-                            <span>Creative solutions. Real results.</span>
+
+                            <strong>
+                                Built for ambitious brands
+                            </strong>
+
+                            <span>
+                                Strategy. Design. Development.
+                            </span>
+
                         </div>
 
                     </div>
@@ -128,63 +356,143 @@
                 </div>
 
 
-                <!-- HERO VISUAL -->
+                <!-- =========================
+                     HERO VISUAL
+                ========================== -->
 
-                <div class="hero-visual">
+                <div
+                    class="hero-visual"
+                    aria-hidden="true"
+                >
 
-                    <div class="visual-orbit orbit-one"></div>
-                    <div class="visual-orbit orbit-two"></div>
+                    <div
+                        class="visual-orbit orbit-one"
+                    ></div>
 
-                    <div class="visual-card main-card">
+                    <div
+                        class="visual-orbit orbit-two"
+                    ></div>
+
+
+                    <!-- MAIN CARD -->
+
+                    <div
+                        class="visual-card main-card"
+                    >
+
+
+                        <!-- CARD TOP -->
 
                         <div class="card-top">
 
                             <div class="mini-brand">
-                                <span>V</span>
+
+                                <span>
+                                    V
+                                </span>
+
                                 VANTORA
+
                             </div>
 
+
                             <div class="card-dots">
+
                                 <i></i>
                                 <i></i>
                                 <i></i>
+
                             </div>
 
                         </div>
+
+
+                        <!-- CHART -->
 
                         <div class="chart-area">
 
                             <div class="chart-label">
-                                <span>Growth</span>
-                                <strong>+84.6%</strong>
+
+                                <span>
+                                    Digital Growth
+                                </span>
+
+                                <strong>
+                                    +84.6%
+                                </strong>
+
                             </div>
 
+
                             <div class="chart">
+
                                 <span class="chart-line"></span>
-                                <span class="chart-point point-one"></span>
-                                <span class="chart-point point-two"></span>
-                                <span class="chart-point point-three"></span>
-                                <span class="chart-point point-four"></span>
-                                <span class="chart-point point-five"></span>
+
+                                <span
+                                    class="chart-point point-one"
+                                ></span>
+
+                                <span
+                                    class="chart-point point-two"
+                                ></span>
+
+                                <span
+                                    class="chart-point point-three"
+                                ></span>
+
+                                <span
+                                    class="chart-point point-four"
+                                ></span>
+
+                                <span
+                                    class="chart-point point-five"
+                                ></span>
+
                             </div>
 
                         </div>
+
+
+                        <!-- CARD STATS -->
 
                         <div class="card-stats">
 
                             <div>
-                                <span>Projects</span>
-                                <strong>120+</strong>
+
+                                <span>
+                                    Digital
+                                </span>
+
+                                <strong>
+                                    360°
+                                </strong>
+
                             </div>
 
-                            <div>
-                                <span>Clients</span>
-                                <strong>80+</strong>
-                            </div>
 
                             <div>
-                                <span>Success</span>
-                                <strong>98%</strong>
+
+                                <span>
+                                    Approach
+                                </span>
+
+                                <strong>
+                                    Full
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Focus
+                                </span>
+
+                                <strong>
+                                    Growth
+                                </strong>
+
                             </div>
 
                         </div>
@@ -192,27 +500,55 @@
                     </div>
 
 
-                    <div class="floating-card floating-top">
+                    <!-- FLOATING CARD TOP -->
 
-                        <div class="floating-icon">✦</div>
+                    <div
+                        class="floating-card floating-top"
+                    >
+
+                        <div class="floating-icon">
+                            ✦
+                        </div>
 
                         <div>
-                            <span>Creative</span>
-                            <strong>Ideas → Impact</strong>
+
+                            <span>
+                                Creative
+                            </span>
+
+                            <strong>
+                                Ideas → Impact
+                            </strong>
+
                         </div>
 
                     </div>
 
 
-                    <div class="floating-card floating-bottom">
+                    <!-- FLOATING CARD BOTTOM -->
+
+                    <div
+                        class="floating-card floating-bottom"
+                    >
 
                         <div class="progress-circle">
-                            <span>98</span>
+
+                            <span>
+                                98
+                            </span>
+
                         </div>
 
                         <div>
-                            <span>Client satisfaction</span>
-                            <strong>Excellent</strong>
+
+                            <span>
+                                Design quality
+                            </span>
+
+                            <strong>
+                                Excellence
+                            </strong>
+
                         </div>
 
                     </div>
@@ -222,13 +558,21 @@
             </div>
 
 
+            <!-- SCROLL INDICATOR -->
+
             <div class="hero-bottom">
 
                 <div class="container">
 
                     <div class="scroll-indicator">
-                        <span class="scroll-line"></span>
+
+                        <span
+                            class="scroll-line"
+                            aria-hidden="true"
+                        ></span>
+
                         Scroll to explore
+
                     </div>
 
                 </div>
@@ -242,33 +586,95 @@
              MARQUEE
         ========================== -->
 
-        <section class="marquee-section">
+        <section
+            class="marquee-section"
+            aria-label="VANTORA capabilities"
+        >
 
             <div class="marquee">
 
                 <div class="marquee-track">
 
-                    <span>STRATEGY</span>
-                    <b>✦</b>
-                    <span>DESIGN</span>
-                    <b>✦</b>
-                    <span>DEVELOPMENT</span>
-                    <b>✦</b>
-                    <span>BRANDING</span>
-                    <b>✦</b>
-                    <span>GROWTH</span>
-                    <b>✦</b>
+                    <span>
+                        STRATEGY
+                    </span>
 
-                    <span>STRATEGY</span>
-                    <b>✦</b>
-                    <span>DESIGN</span>
-                    <b>✦</b>
-                    <span>DEVELOPMENT</span>
-                    <b>✦</b>
-                    <span>BRANDING</span>
-                    <b>✦</b>
-                    <span>GROWTH</span>
-                    <b>✦</b>
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        DESIGN
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        DEVELOPMENT
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        BRANDING
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        DIGITAL
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+
+                    <span>
+                        STRATEGY
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        DESIGN
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        DEVELOPMENT
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        BRANDING
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
+
+                    <span>
+                        DIGITAL
+                    </span>
+
+                    <b aria-hidden="true">
+                        ✦
+                    </b>
 
                 </div>
 
@@ -281,33 +687,60 @@
              INTRO SECTION
         ========================== -->
 
-        <section class="intro-section section-padding">
+        <section
+            class="intro-section section-padding"
+        >
 
             <div class="container">
 
+
                 <div class="section-label">
+
                     <span></span>
+
                     WHO WE ARE
+
                 </div>
+
 
                 <div class="intro-grid">
 
+
                     <h2>
+
                         Your vision deserves
-                        <span>more than ordinary.</span>
+
+                        <span>
+                            more than ordinary.
+                        </span>
+
                     </h2>
+
 
                     <div class="intro-text">
 
                         <p>
-                            We combine strategy, creativity and technology
-                            to create digital products that don't just look
-                            good — they perform.
+
+                            We combine strategy,
+                            creativity and technology
+                            to create digital experiences
+                            that don't just look good —
+                            they have a purpose.
+
                         </p>
 
-                        <a href="about.html" class="text-link">
+
+                        <a
+                            href="about.html"
+                            class="text-link"
+                        >
+
                             Discover VANTORA
-                            <span>↗</span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+
                         </a>
 
                     </div>
@@ -323,94 +756,177 @@
              SERVICES PREVIEW
         ========================== -->
 
-        <section class="services-preview section-padding">
+        <section
+            class="services-preview section-padding"
+        >
 
             <div class="container">
+
+
+                <!-- SECTION HEADING -->
 
                 <div class="section-heading">
 
                     <div>
 
                         <div class="section-label">
+
                             <span></span>
+
                             WHAT WE DO
+
                         </div>
 
+
                         <h2>
+
                             Built for
-                            <span>ambition.</span>
+
+                            <span>
+                                ambition.
+                            </span>
+
                         </h2>
 
                     </div>
 
-                    <a href="services.html" class="outline-link">
+
+                    <a
+                        href="services.html"
+                        class="outline-link"
+                    >
+
                         All Services
-                        <span>↗</span>
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+
                     </a>
 
                 </div>
 
 
+                <!-- SERVICE CARDS -->
+
                 <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
 
                     <article class="service-card">
 
-                        <div class="service-number">01</div>
+                        <div class="service-number">
+                            01
+                        </div>
 
-                        <div class="service-icon">✦</div>
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </div>
 
-                        <h3>Web Design</h3>
+                        <h3>
+                            Web Design
+                        </h3>
 
                         <p>
-                            Beautiful, strategic interfaces built around
-                            your audience and business goals.
+
+                            Strategic, modern interfaces
+                            designed around your audience,
+                            brand and business goals.
+
                         </p>
 
                         <a href="services.html">
+
                             Explore
-                            <span>↗</span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+
                         </a>
 
                     </article>
 
+
+                    <!-- SERVICE 02 -->
 
                     <article class="service-card featured">
 
-                        <div class="service-number">02</div>
+                        <div class="service-number">
+                            02
+                        </div>
 
-                        <div class="service-icon">◈</div>
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            ◈
+                        </div>
 
-                        <h3>Development</h3>
+                        <h3>
+                            Development
+                        </h3>
 
                         <p>
-                            Fast, responsive and scalable websites built
-                            with modern web technologies.
+
+                            Fast, responsive and polished
+                            websites built with modern
+                            web technologies.
+
                         </p>
 
                         <a href="services.html">
+
                             Explore
-                            <span>↗</span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+
                         </a>
 
                     </article>
 
 
+                    <!-- SERVICE 03 -->
+
                     <article class="service-card">
 
-                        <div class="service-number">03</div>
+                        <div class="service-number">
+                            03
+                        </div>
 
-                        <div class="service-icon">✧</div>
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            ✧
+                        </div>
 
-                        <h3>Brand Strategy</h3>
+                        <h3>
+                            Brand Strategy
+                        </h3>
 
                         <p>
-                            Strong digital identities that make your brand
-                            memorable in a crowded market.
+
+                            Clear digital identities that
+                            help brands become recognizable,
+                            memorable and trusted.
+
                         </p>
 
                         <a href="services.html">
+
                             Explore
-                            <span>↗</span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+
                         </a>
 
                     </article>
@@ -430,31 +946,55 @@
 
             <div class="container stats-grid">
 
+
                 <div class="stat-item">
 
-                    <strong data-count="120">0</strong>
-                    <span>Projects Delivered</span>
+                    <strong data-count="120">
+                        0
+                    </strong>
+
+                    <span>
+                        Projects Delivered
+                    </span>
 
                 </div>
 
+
                 <div class="stat-item">
 
-                    <strong data-count="80">0</strong>
-                    <span>Happy Clients</span>
+                    <strong data-count="80">
+                        0
+                    </strong>
+
+                    <span>
+                        Happy Clients
+                    </span>
 
                 </div>
 
+
                 <div class="stat-item">
 
-                    <strong data-count="98">0</strong>
-                    <span>Success Rate</span>
+                    <strong data-count="98">
+                        0
+                    </strong>
+
+                    <span>
+                        Success Rate
+                    </span>
 
                 </div>
 
+
                 <div class="stat-item">
 
-                    <strong data-count="7">0</strong>
-                    <span>Years Experience</span>
+                    <strong data-count="7">
+                        0
+                    </strong>
+
+                    <span>
+                        Years Experience
+                    </span>
 
                 </div>
 
@@ -467,32 +1007,61 @@
              CTA
         ========================== -->
 
-        <section class="cta-section section-padding">
+        <section
+            class="cta-section section-padding"
+        >
 
             <div class="container">
 
                 <div class="cta-box">
 
-                    <div class="cta-glow"></div>
+                    <div
+                        class="cta-glow"
+                        aria-hidden="true"
+                    ></div>
+
 
                     <div class="section-label">
+
                         <span></span>
+
                         HAVE A PROJECT?
+
                     </div>
 
+
                     <h2>
+
                         Let's create something
-                        <span>remarkable.</span>
+
+                        <span>
+                            remarkable.
+                        </span>
+
                     </h2>
 
+
                     <p>
-                        Have an idea, a challenge or a project in mind?
-                        Let's turn it into something people remember.
+
+                        Have an idea, a challenge or
+                        a project in mind? Let's turn
+                        it into a digital experience
+                        people remember.
+
                     </p>
 
-                    <a href="contact.html" class="btn btn-primary">
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary"
+                    >
+
                         Start a Conversation
-                        <span>↗</span>
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+
                     </a>
 
                 </div>
@@ -512,46 +1081,96 @@
 
         <div class="container">
 
+
             <div class="footer-top">
+
+
+                <!-- FOOTER BRAND -->
 
                 <div class="footer-brand">
 
-                    <a href="index.html" class="logo">
+                    <a
+                        href="index.html"
+                        class="logo"
+                        aria-label="VANTORA Home"
+                    >
 
-                        <span class="logo-mark">V</span>
-                        <span class="logo-text">VANTORA</span>
+                        <span class="logo-mark">
+                            V
+                        </span>
+
+                        <span class="logo-text">
+                            VANTORA
+                        </span>
 
                     </a>
 
+
                     <p>
-                        Digital experiences built for ambitious brands.
+
+                        Digital experiences built
+                        for ambitious brands.
+
                     </p>
 
                 </div>
 
 
+                <!-- FOOTER LINKS -->
+
                 <div class="footer-links">
+
+
+                    <!-- EXPLORE -->
 
                     <div>
 
-                        <h4>Explore</h4>
+                        <h4>
+                            Explore
+                        </h4>
 
-                        <a href="about.html">About</a>
-                        <a href="services.html">Services</a>
-                        <a href="pricing.html">Pricing</a>
-                        <a href="portfolio.html">Portfolio</a>
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
 
                     </div>
 
 
+                    <!-- CONNECT -->
+
                     <div>
 
-                        <h4>Connect</h4>
+                        <h4>
+                            Connect
+                        </h4>
 
-                        <a href="contact.html">Contact</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Facebook</a>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="testimonials.html">
+                            Testimonials
+                        </a>
+
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
 
                     </div>
 
@@ -560,16 +1179,27 @@
             </div>
 
 
+            <!-- FOOTER BOTTOM -->
+
             <div class="footer-bottom">
 
                 <span>
-                    © 2026 VANTORA. All rights reserved.
+
+                    © 2026 VANTORA.
+                    All rights reserved.
+
                 </span>
+
 
                 <div>
 
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
 
                 </div>
 
@@ -580,7 +1210,13 @@
     </footer>
 
 
+    <!-- =========================
+         MAIN JAVASCRIPT
+    ========================== -->
+
     <script src="script.js"></script>
+
 
 </body>
 </html>
+```
