@@ -1059,7 +1059,7 @@ img {
 
 .floating-bottom {
     left: -30px;
-    bottom: 70px;
+    bottom: 40px;
 
     animation: floatingBottom 5.5s ease-in-out infinite;
 }
